@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class FreqOfCharacters
+public class  FreqOfCharacters
 {
     
     public static void FreqOfChar(String stri)
@@ -21,7 +21,7 @@ public class FreqOfCharacters
         for(i=0; i<stri.length(); i++)
         {
               freq[i] = 1;   
-            for(j=1; j<stri.length(); j++)
+            for(j=i+1; j<stri.length(); j++)
             {
                 if(charArr[i]==charArr[j])
                 {
@@ -32,7 +32,7 @@ public class FreqOfCharacters
             }
         }
         
-         for(i = 0; i <freq.length; i++) {    
+         for(i = 0; i <charArr.length; i++) {    
             if(charArr[i] != ' ' && charArr[i] != '0')    
                 System.out.println(charArr[i] + "-" + freq[i]);    
         }    
