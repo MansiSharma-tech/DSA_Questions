@@ -1,31 +1,44 @@
-class TargetSum
-{
+import java.util.Scanner;
+class Main{
     
-    public static void findPair(int[] nums, int target)
+    public static void FindTarget(int [] arr, int targetValue)
     {
-       
-        for (int i = 0; i < nums.length - 1; i++)
+        //base condition 
+        if(arr.length==0)
         {
-            
-            for (int j = i + 1; j < nums.length; j++)
-            {
-               
-                if (nums[i] + nums[j] == target)
-                {
-                    System.out.println("Pair found (" + nums[i] + "," + nums[j] + ")");
-                    return;
-                }
-            }
+            System.out.println("Enter valid array");
         }
- 
-        System.out.println("Pair not found");
+        for(int i=0; i<arr.length-1;i++)
+        {
+            for(int j=i+1; j<arr.length; j++)
+            {
+                if(arr[i]+arr[j]==targetValue)
+                {
+                    System.out.println("("+ i + " ," + j +")");
+                }
+
+            }
+            
+        }
+        
     }
- 
-    public static void main (String[] args)
+    
+    public static void main(String args[])
     {
-        int[] nums = { 8, 7, 2, 5, 3, 1 };
-        int target = 10;
- 
-        findPair(nums, target);
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of an array");
+        int size = sc.nextInt();
+        System.out.println("Enter the element of an array");
+        
+        int [] arr = new int [size];
+        for(int i=0; i<size; i++)
+        {
+            arr[i] = sc.nextInt();
+        }
+        
+         System.out.println("Enter the target value");
+         int targetValue = sc.nextInt();
+         
+         FindTarget(arr, targetValue);
     }
 }
