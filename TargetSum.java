@@ -2,7 +2,10 @@ import java.util.Scanner;
 class Main{
     
     public static void FindTarget(int [] arr, int targetValue)
+    
     {
+        //other way to print "target sum not found" using "flag"
+        //int flag;
         //base condition 
         if(arr.length==0)
         {
@@ -15,11 +18,20 @@ class Main{
                 if(arr[i]+arr[j]==targetValue)
                 {
                     System.out.println("("+ i + " ," + j +")");
+                    return;
+                    //flag++;
                 }
+                
 
             }
             
         }
+    //     
+    //   if(flag==0)
+    //   {
+    //         System.out.println("target sum not found");
+    //   }
+         System.out.println("target sum not found");
         
     }
     
