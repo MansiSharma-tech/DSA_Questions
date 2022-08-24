@@ -1,13 +1,13 @@
 import java.util.*;
 
-class  MinSwapToMakeStringEquals{
+class MinSwapToMakeStringEquals{
     public static void main(String args[])
     {
         Scanner sc = new Scanner(System.in);
-        String str = sc.nextLine();
-        String str1 = sc.nextLine();
+        String str = sc.next();
+        String str1 = sc.next();
         
-        minimumSwap(str, str1);
+       System.out.println(minimumSwap(str, str1));
         
     }
     public static int minimumSwap(String s1, String s2) {
