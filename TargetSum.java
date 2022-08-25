@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class Main{
+class TargetSum{
     
     public static void FindTarget(int [] arr, int targetValue)
     
