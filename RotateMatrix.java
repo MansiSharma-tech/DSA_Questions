@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class RotateArray
+public class RotateMatrix
 {
     
     
