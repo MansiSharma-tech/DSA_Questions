@@ -1,32 +1,23 @@
-import java.io.*;
-  
-class Square {
-  
+public class MethodOverloading
+{
+  static void add (int a, int b)
+  {
+    System.out.println (a + b);
+  }
+  static void add (int a, int b, int c)
+  {
+    System.out.println (a + b + c);
+  }
 
-    void Area(double side)
-    {
-        System.out.println("Area of the Square: "
-                           + side * side);
-    }
-  
-   
-    void Area(float side)
-    {
-        System.out.println("Area of the Square: "
-                           + side * side);
-    }
-}
-  
-class MethodOverloading{
-  
-   
-    public static void main(String[] args)
-    {
-  
-        Square obj = new Square();
-  
-       
-        obj.Area(10);
-        obj.Area(3.2);
-    }
+  static void add (double a, double b)
+  {
+    System.out.println(a+b);
+  }
+  public static void main (String[]args)
+  {
+    
+    add (2, 4);
+    add (2, 4, 6);
+    add(1.2, 3.6);
+  }
 }
