@@ -1,28 +1,27 @@
 import java.util.*;
+public class ReverseNumber
+{
+    public int reverseNumber(int num)
+    {
+        int result=0;
+        if(num==0)
+        return 0;
+       
+	    while(num!=0)
+        {
+            result = result*10+num%10;
+            num = num/10;
+        }
+        return result;
+    }
 
-public class ReverseNumber{
-    
-static int reverse(int n){
-       
-      int rev = 0; // reversed number
-      int rem;   // remainder
-       
-      while(n>0){ //n=123, n=12, n=1
-          
-        rem = n%10;//rem=3, rem=1
-        rev = (rev*10) + rem;//rev=0+3=3, rev=30+2=32, rev=320+1=321
-        n = n/10; //n=12, n=1, n=0
-      }
-       
-      return rev;//rev=321
-    }
-     
-   // Driver Function
-    public static void main (String[] args) {
-      Scanner sc = new Scanner(System.in);
-      int n = sc.nextInt();
-         
-        System.out.print("Reversed Number is "+ reverse(n));
-    }
-   
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		System.out.println("Enter an integer value : ");
+		int num = sc.nextInt();
+		
+		Main obj = new Main();
+		System.out.println(obj.reverseNumber(num));
+		
+	}
 }
