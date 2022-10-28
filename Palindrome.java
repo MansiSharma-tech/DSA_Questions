@@ -1,30 +1,18 @@
-import java.util.*;
- 
-class Palindrome{
- 
-  static boolean checkPalindrome(int n)
-  {
-    int reverse = 0;
-    int temp = n;
-    while (temp != 0) {
-      reverse = (reverse * 10) + (temp % 10);
-      temp = temp / 10;
+class Palindrome {
+    public boolean isPalindrome(int x) {//121
+         int sum=0;
+        int temp=x;
+        while(x>0)
+        {
+        int rem = x%10;//rem=1,2
+        sum=(sum*10)+rem;//sum=1,121
+        x=x/10;//12,1,0
+        }
+        if(temp==sum)
+            return true;
+        else
+            return false;
+        
+        
     }
-    return (reverse == n); // if it is true then it will return 1;
-    // else if false it will return 0;
-  }
- 
-  // Driver Code
-  public static void main(String args[])
-  {
-      Scanner sc = new Scanner(System.in);
-      
-    int n = sc.nextInt();
-    if (checkPalindrome(n) == true) {
-      System.out.println("Yes");
-    }
-    else {
-      System.out.println("No");
-    }
-  }
 }
