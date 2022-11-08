@@ -1,0 +1,51 @@
+import java.util.*;
+public class MostEvenFrequentNo
+{
+   public int mostFrequentEven(int[] nums) {
+        Map<Integer, Integer> data = new HashMap<>();
+        Arrays.sort(nums);//0,1,1,2,2,4,4
+    
+        for(int i=0; i<nums.length; i++)
+        {
+            if(data.containsKey(nums[i]))
+            {
+             data.put(nums[i], data.get(nums[i]) + 1);
+            }
+            else
+            {
+                data.put(nums[i], 1);
+            }
+        }
+           int max = Integer.MIN_VALUE;
+        for(int i=0;i<nums.length;i++){
+            if(nums[i] % 2 == 0){
+                if(data.get(nums[i]) > max){
+                    max = data.get(nums[i]);
+                }
+              }
+           }
+          for(int i=0;i<nums.length;i++){
+            if(nums[i] % 2 == 0 && data.get(nums[i]) == max){
+                return nums[i];
+            }
+        }
+        return -1;
+        
+}
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    System.out.println("Enter size of an array");
+	    int size = sc.nextInt();      
+	    int arr[] = new int [size];
+	     System.out.println("Enter elements of an array : ");
+	    for(int i=0; i<size; i++)
+	    {
+	        arr[i]=sc.nextInt();
+	    }
+	    
+	    MostEvenFrequentNo obj = new MostEvenFrequentNo();
+	     System.out.println("Most frequent even element of an array : ");
+         System.out.println(obj.mostFrequentEven(arr));
+	
+	}
+}
