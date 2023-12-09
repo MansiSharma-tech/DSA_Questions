@@ -1,4 +1,5 @@
-class BinaryTreeInorderTraversal {
+class BinaryTreeInorderTraversal
+ {
   public List<Integer> inorderTraversal(TreeNode root) {
     List<Integer> ans = new ArrayList<>();
     Deque<TreeNode> stack = new ArrayDeque<>();
